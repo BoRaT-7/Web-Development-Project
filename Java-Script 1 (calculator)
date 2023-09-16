@@ -1,0 +1,43 @@
+console.log("Select a option /n 1. add /n 2. subtract /n 3.multipol /n 4. divide");
+
+var num1 = prompt("Enter the first  number ");
+var num2 = prompt("Enter 2nd number :");
+var  option  = prompt("choose a option  :");
+var result = null;
+
+num1 = parseInt(num1);
+num2 = parseInt(num2);
+option  = parseInt(option);
+
+var numcon1 = isNaN(num1);
+var numcon2 = isNaN(num2);
+var optioncon = isNaN(option);
+
+if ( numcon1 || numcon2 ||optioncon){
+    console.log("invalid input ");
+
+}
+else{
+    switch(option){
+ case 1 :
+   result = num1 + num2 ;
+    break;
+ case 2 :
+    result = num1 - num2;
+    break;
+ case 3 :
+    result = num1*num2;
+   break;
+ case 4 : 
+     result = num1/num2;
+    break;
+ default:
+    break; 
+    }
+    if (result == null){
+        console.log("No result ");
+    }
+    else{
+        console.log("result :"+result);
+    }
+}
